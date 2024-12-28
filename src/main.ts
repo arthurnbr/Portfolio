@@ -1,35 +1,41 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import { createMemoryHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from './views/LandingPage.vue'
 import ProjectsPage from './views/ProjectsPage.vue'
+import MowglillePage from './views/projects/MowglillePage.vue'
 
 
 const routes = [
-  { path: '/', 
+  { 
+    path: '/', 
     component: LandingPage,
     meta: {
-        transition: 'slide-fade'
+        transition: 'slide-right'
     }
   },
-  { path: '/projects',
+  { 
+    path: '/projects',
     component: ProjectsPage,
     meta: {
-        transition: 'slide-fade'
+        transition: 'slide-left'
     }
  },
+ {
+    path: '/projects/mowglille',
+    component: MowglillePage,
+ }
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 })
 
-router.afterEach((to: any, from: any) => {
-    const toDepth = to.path.split('/').length
-    const fromDepth = from.path.split('/').length
-    to.meta.transition = toDepth < fromDepth ? 'slide-fade' : 'slide-left'
-  })
+router.afterEach((to, from) => {
+  
+})
+
 
 createApp(App).use(router).mount('#app')
