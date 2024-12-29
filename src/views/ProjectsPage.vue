@@ -8,7 +8,7 @@ import TypeWriterText from '../components/TypeWriterText.vue';
 const projects = [
   {
     name: "Mowg'Lille",
-    description: "Application mobile de covoiturage pour les étudiants de Lille",
+    description: "Application mobile de covoiturage pour les étudiants de Lille Application mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de LilleApplication mobile de covoiturage pour les étudiants de Lille",
     technologies: ["React Native", "Node.js", "MongoDB"],
     route : "/projects/mowglille"
   },
@@ -37,19 +37,19 @@ const projects = [
     route : "/projects/bde"
   },
   {
-    name: "In Comming",
+    name: "Bientot",
     description: "Application mobile de gestion de contacts",
     technologies: ["React Native", "Node.js", "MongoDB"],
     route : "/projects/incomming"
   },
   {
-    name: "Vrm 2026",
+    name: "Bientot",
     description: "Application mobile de gestion de contacts",
     technologies: ["React Native", "Node.js", "MongoDB"],
     route : "/projects/vrm2026"
   },
   {
-    name: "Vous êtes pas prêt",
+    name: "Bientot",
     description: "Application mobile de gestion de contacts",
     technologies: ["React Native", "Node.js", "MongoDB"],
     route : "/projects/vous-etes-pas-pret"
@@ -86,11 +86,11 @@ function comptuteOpacity(index) {
 <template>
   <div class="w-full h-full flex justify-between items-center px-32">
     <Transition name="slide-fade-left" appear>
-      <div class="h-full flex py-32">
+      <div class="h-full flex">
         <div class="h-full flex flex-col pt-24 items-center">
           <ChevronRightIcon fillColor="#ffa500" :size="94"/>
         </div>
-        <div class="pt-24 h-[784px] flex flex-col overflow-auto no-scrollbar snap-y" ref="scrollContainer" @wheel="onWheel">
+        <div class="pt-24 h-[784px] w-full flex flex-col overflow-auto no-scrollbar snap-y" ref="scrollContainer" @wheel="onWheel">
           <h1 
             v-for="(projects, index) in projects"
             :key="index"
@@ -123,9 +123,14 @@ function comptuteOpacity(index) {
         </div>
       </div>
     </Transition>
-    <div class="h-full flex flex-col items-center">
-      <div class="h-[800px] w-[500px] bg-red-50"></div>
-      <TypeWriterText :text=projects[selectedIndex].description :delay=5></TypeWriterText>
+    <div class="h-full flex flex-col py-24 gap-4">
+      <div class="h-[550px] w-[800px] bg-red-50"></div>
+      <div class="flex gap-4">
+        <p>Salut</p>
+        <p>Salut</p>
+        <p>Salut</p>
+      </div>
+      <TypeWriterText class="max-w-[800px]" :text=projects[selectedIndex].description :delay=5></TypeWriterText>
     </div>
 
     <router-link to="/" class="absolute top-0 left-0 p-4 cursor-pointer">

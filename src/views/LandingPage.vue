@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, watch } from 'vue';
+import { onMounted, ref, watch,} from 'vue';
 import xButton from '../components/x-button.vue';
 import ChevronRightIcon from 'vue-material-design-icons/ChevronRight.vue';
 

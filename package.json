@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@vueuse/core": "^12.2.0",
+    "scrollreveal": "^4.0.9",
     "three": "^0.169.0",
     "vue": "^3.5.12",
     "vue-material-design-icons": "^5.3.1",
     "vue-router": "^4.0.13",
+    "vue-scroll-reveal": "^2.1.0",
     "vue3-highlightjs": "^1.0.5"
   },
   "devDependencies": {

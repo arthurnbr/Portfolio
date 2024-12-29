@@ -6,7 +6,6 @@ import LandingPage from './views/LandingPage.vue'
 import ProjectsPage from './views/ProjectsPage.vue'
 import MowglillePage from './views/projects/MowglillePage.vue'
 
-
 const routes = [
   { 
     path: '/', 
@@ -36,6 +35,5 @@ const router = createRouter({
 router.afterEach((to, from) => {
   
 })
-
 
 createApp(App).use(router).mount('#app')
